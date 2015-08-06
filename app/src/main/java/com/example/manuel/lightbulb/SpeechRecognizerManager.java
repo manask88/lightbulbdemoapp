@@ -54,7 +54,7 @@ public class SpeechRecognizerManager {
     /* Named searches allow to quickly reconfigure the decoder */
     private static final String KWS_SEARCH = "wakeup";
     /* Keyword we are looking for to activate menu */
-    private static final String KEYPHRASE = "ok camera";
+    private static final String KEYPHRASE = "ok light";
     private edu.cmu.pocketsphinx.SpeechRecognizer mPocketSphinxRecognizer;
     private static final String TAG = SpeechRecognizerManager.class.getSimpleName();
     protected AudioManager mAudioManager;
@@ -311,7 +311,7 @@ public class SpeechRecognizerManager {
                 }
 
 
-                //sends list of workds to mOnResultListener
+                //send list of words to activity
                 if (mOnResultListener!=null){
                 mOnResultListener.OnResult(heard);
                 }
